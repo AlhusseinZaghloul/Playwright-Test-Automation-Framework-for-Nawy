@@ -108,4 +108,3 @@ Tests automatically generate:
 - HTML reports with screenshots
 - Video recordings of test runs
 - Trace viewer for debugging
-```
