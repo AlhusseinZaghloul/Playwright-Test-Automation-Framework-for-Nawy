@@ -104,14 +104,4 @@ The framework uses the Page Object Model design pattern. Each page object class 
    - Create a new test file in the `tests/` directory or add to an existing one.
    - Use the page object to interact with the page and make assertions.
 
-## Additional Notes
-
-- **Selector Accuracy**: The selectors in the page objects are placeholders. Use Playwright's `codegen` tool to inspect the page and update the selectors:
-  ```bash
-  npx playwright codegen https://www.nawy.com
-  ```
-
-- **SPA Handling**: If the Nawy website is a Single Page Application (SPA), you may need to adjust the navigation waits in the page object methods.
-
-- **Extending the Framework**: The framework is designed to be scalable. Add new page objects and test files as needed to cover more functionality.
 
