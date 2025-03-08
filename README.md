@@ -1,16 +1,30 @@
+
 # Nawy Test Automation Framework
 
-This project is a test automation framework for the Nawy website ([https://www.nawy.com/](https://www.nawy.com/)), built using Playwright with TypeScript. It follows the Page Object Model (POM) design pattern to ensure maintainability and readability.
+[![Playwright](https://img.shields.io/badge/Playwright-2.4+-blue?logo=playwright)](https://playwright.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-4.9+-3178C6?logo=typescript)](https://www.typescriptlang.org)
+
+Automation framework for testing Nawy's real estate platform ([https://www.nawy.com/](https://www.nawy.com/)). Built with Playwright and TypeScript using Page Object Model (POM) design pattern for maintainable and scalable test automation.
 
 ## Table of Contents
 
+- [Features](#features)
 - [Project Structure](#project-structure)
-- [Setup](#setup)
+- [Quick Start](#quick-start)
 - [Running Tests](#running-tests)
-- [Writing Tests](#writing-tests)
-- [Additional Notes](#additional-notes)
+- [Reporting](#reporting)
+
+## Features
+
+- **Modern Stack**: Playwright + TypeScript
+- **Page Object Model**: Clean separation of test logic and page interactions
+- **Cross-browser Testing**: Supports Chromium, Firefox, and WebKit
+- **Parallel Execution**: Built-in test parallelization
+- **CI/CD Ready**: GitHub Actions integration example
+- **Interactive Reporting**: HTML test reports with screenshots and traces
 
 ## Project Structure
+
 
 The project is organized into the following directories:
 
@@ -25,83 +39,73 @@ nawy-automation/
 └── package.json
 ```
 
-- **`pages/`**: Contains page object classes that encapsulate the elements and actions of specific pages on the Nawy website.
-- **`tests/`**: Contains test files that use the page objects to verify the functionality of the website.
-- **`playwright.config.ts`**: Configuration file for Playwright's test runner.
-- **`tsconfig.json`**: TypeScript configuration.
-- **`package.json`**: Project metadata and scripts.
-
-## Setup
+## Quick Start
 
 ### Prerequisites
 
-- **Node.js**: Ensure Node.js is installed on your system. You can download it from [nodejs.org](https://nodejs.org).
-- **Terminal**: Use a terminal or command-line interface to run setup commands.
+- Node.js 16+ [Download](https://nodejs.org/)
+- npm 8+
 
-### Steps
+### Setup
 
-1. **Clone the Repository**:
-   - Clone this repository to your local machine:
-     ```bash
-     git clone https://github.com/your-repo/nawy-automation.git
-     cd nawy-automation
-     ```
+1. **Clone Repository**
+   ```bash
+   git clone https://github.com/your-username/nawy-automation.git
+   cd nawy-automation
+   ```
 
-2. **Install Dependencies**:
-   - Install the required dependencies:
-     ```bash
-     npm install
-     ```
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-3. **Initialize TypeScript**:
-   - If not already present, generate a `tsconfig.json` file:
-     ```bash
-     npx tsc --init
-     ```
+3. **Install Playwright Browsers**
+   ```bash
+   npx playwright install
+   ```
 
 ## Running Tests
 
-To run the tests, use the following command:
-
+**Run All Tests**
 ```bash
-npx playwright test
+npm test
 ```
 
-This will execute all the tests in the `tests/` directory using Playwright's test runner.
+**Run Specific Test Suite**
+```bash
+npx playwright test tests/homePageTests.ts
+```
 
-### Additional Options
+**Run in Headed Mode**
+```bash
+npx playwright test --headed
+```
 
-- **Headed Mode**: To run tests in headed mode (with a visible browser), use:
-  ```bash
-  npx playwright test --headed
-  ```
+**Debug Tests**
+```bash
+npx playwright test --debug
+```
 
-- **Specific Test File**: To run a specific test file, use:
-  ```bash
-  npx playwright test tests/homePageTests.ts
-  ```
-
-- **Debug Mode**: To run tests in debug mode, use:
-  ```bash
-  npx playwright test --debug
-  ```
-
-## Writing Tests
-
-### Page Object Model (POM)
-
-The framework uses the Page Object Model design pattern. Each page object class (e.g., `HomePage.ts`) encapsulates the elements and actions of a specific page, making the tests more readable and maintainable.
+**Cross-browser Testing**
+```bash
+npx playwright test --project=chromium
+npx playwright test --project=firefox
+npx playwright test --project=webkit
+```
 
 
 
-### Adding New Tests
+## Reporting
 
-1. **Create a Page Object**:
-   - If the page doesn't already have a page object, create a new class in the `pages/` directory.
-   - Define locators and methods for interacting with the page.
+**View HTML Report**
+```bash
+npx playwright show-report
+```
 
-2. **Write Tests**:
-   - Create a new test file in the `tests/` directory or add to an existing one.
-   - Use the page object to interact with the page and make assertions.
+![Playwright Report](https://playwright.dev/img/playwright-report.svg)
 
-
+Tests automatically generate:
+- HTML reports with screenshots
+- Video recordings of test runs
+- Trace viewer for debugging
+```
