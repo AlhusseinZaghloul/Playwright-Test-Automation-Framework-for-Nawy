@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 
-export const generateExpertAdviceData = () => {
+export const generateFormData = () => {
     const compounds = ['Silversands', 'Cairo Gate', 'Mountain View iCity October', 'Palm Hills Golf Extension',
         'June','The Square','Mivida','ZED','SODIC East','O West Orascom' ];
     return {
