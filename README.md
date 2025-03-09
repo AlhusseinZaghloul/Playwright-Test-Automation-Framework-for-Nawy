@@ -1,9 +1,10 @@
+
 # Nawy Test Automation Framework
 
 [![Playwright](https://img.shields.io/badge/Playwright-2.4+-blue?logo=playwright)](https://playwright.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-4.9+-3178C6?logo=typescript)](https://www.typescriptlang.org)
 
-Automation framework for testing Nawy's real estate platform ([https://www.nawy.com/](https://www.nawy.com/)). Built with Playwright and TypeScript using the Page Object Model (POM) design pattern for maintainable and scalable test automation.
+Automation framework for testing Nawy's real estate platform ([https://www.nawy.com/](https://www.nawy.com/)). Built with Playwright and TypeScript using the Page Object Model (POM) design pattern for maintainable and scalable test automation. This framework incorporates **data-driven testing** and **dynamic data generation** to ensure comprehensive and flexible test coverage.
 
 ## Table of Contents
 
@@ -18,6 +19,8 @@ Automation framework for testing Nawy's real estate platform ([https://www.nawy.
 
 - **Modern Stack**: Playwright + TypeScript
 - **Page Object Model**: Clean separation of test logic and page interactions
+- **Data-Driven Testing**: Supports testing with multiple data sets for comprehensive coverage
+- **Dynamic Data Generation**: Uses Faker.js to create realistic, randomized test data
 - **Cross-browser Testing**: Supports Chromium, Firefox, and WebKit
 - **Parallel Execution**: Built-in test parallelization
 - **CI/CD Ready**: GitHub Actions integration example
