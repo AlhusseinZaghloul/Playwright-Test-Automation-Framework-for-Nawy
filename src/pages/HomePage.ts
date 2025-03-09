@@ -5,7 +5,7 @@ export class HomePage {
     private searchInput: Locator;
     private searchButton: Locator;
     private pageTitle: Locator;
-
+   
     constructor(page: Page) {
         this.page = page;
         this.searchInput = page.locator('#search-input');
@@ -17,6 +17,10 @@ export class HomePage {
     async navigate(): Promise<void> {
         await this.page.goto('/');
     }
+      /** Navigate to About */
+      async navigateToAbout(): Promise<void> {
+        await this.page.locator('[data-test="about-btn"]').click();
+      }
 
     /** Get the text of the page title */
     async getPageTitle(): Promise<string | null> {

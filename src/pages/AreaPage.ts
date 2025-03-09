@@ -11,7 +11,6 @@ export class AreaPage {
     constructor(page: Page, areaName: string) {
         this.page = page;
         this.areaName = areaName;
-        // Placeholder selectors; replace with actual ones after inspection
         this.header = page.locator('h1');
         this.searchInput = page.locator('#search-input');
         this.searchButton = page.locator('#search-button');
