@@ -20,11 +20,10 @@ test.describe('Nawy About page Tests', () => {
     /**
      * Tests navigation to the About page and verifies the header text.
      */
-    test('navigate to About', async ({ page }) => {
+    test('navigate to About', { tag: '@Smoke' }, async ({ page }) => {
         const headerText = await aboutPage.getAboutScreenHeaderText();
         expect(headerText).toBe('About Nawy'); // Assert the header is correct
     });
-
     /**
      * Tests submitting the "Need expert advice" form and verifies the success message.
      */

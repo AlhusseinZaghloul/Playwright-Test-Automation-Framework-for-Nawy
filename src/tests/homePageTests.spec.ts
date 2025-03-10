@@ -12,7 +12,7 @@ test.describe('Nawy Homepage Tests', () => {
         await homePage.navigate();
     });
 
-    test('verifies homepage loads correctly', async () => {
+    test('verifies homepage loads correctly', { tag: '@Smoke' }, async () => {
         const title = await homePage.getPageTitle();
         expect(title).toBe('Your Home In A Compound');
     });
