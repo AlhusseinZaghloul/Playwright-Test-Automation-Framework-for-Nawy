@@ -1,4 +1,3 @@
-
 # Nawy Test Automation Framework
 
 [![Playwright](https://img.shields.io/badge/Playwright-2.4+-blue?logo=playwright)](https://playwright.dev)
@@ -63,7 +62,7 @@ nawy-automation/
 
 1. **Clone Repository**
    ```bash
-   git clone https://github.com/your-username/nawy-automation.git
+   git clone [https://github.com/your-username/nawy-automation.git](https://github.com/AlhusseinZaghloul/Playwright-Test-Automation-Framwork-for-Nawy)
    cd nawy-automation
    ```
 
@@ -166,9 +165,3 @@ This section covers the automation specific to the About page of the Nawy websit
   2. **Submit Need expert advice form**: Submits the form with random data and confirms the success message contains "Thank You".
 
 **Usage**: Validates the About page's core functionality in an automated, repeatable manner.
-
-### Notes
-
-- The About page is assumed to be accessible at `/about-us` with specific elements (e.g., header, form fields). Adjust locators in `AboutPage.ts` if the page structure changes.
-- Fresh test data is generated for each test run to avoid data conflicts and ensure consistency.
-- Screenshots and traces in the Playwright report aid in debugging About page test failures.
