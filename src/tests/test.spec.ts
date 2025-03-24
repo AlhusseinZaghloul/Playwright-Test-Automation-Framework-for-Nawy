@@ -10,7 +10,7 @@ test.describe('Mostakbal City Area Tests', () => {
         await areaPage.navigate();
     });
 
-    test('verifies page loads with correct header', async () => {
+    test('verifies page loads with correct header', { tag: '@Smoke' }, async () => {
         const headerText = await areaPage.getHeaderText();
         // Expecting the header to contain "Mostakbal City"
         expect(headerText).toContain('Mostakbal City');

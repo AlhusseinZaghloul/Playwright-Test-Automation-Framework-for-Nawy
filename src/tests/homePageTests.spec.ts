@@ -18,7 +18,7 @@ test.describe('Nawy Homepage Tests', () => {
     });
     
     
-    test('navigate to About', async ({ page }) => {
+    test('navigate to About', { tag: '@Smoke' }, async ({ page }) => {
     await homePage.navigateToAbout();
     aboutPage= new AboutPage(page);
     expect(await aboutPage.getAboutScreenHeaderText()).toBe('About Nawy');

@@ -24,15 +24,19 @@ test.describe('Nawy About page Tests', () => {
         const headerText = await aboutPage.getAboutScreenHeaderText();
         expect(headerText).toBe('About Nawy'); // Assert the header is correct
     });
+
     /**
      * Tests submitting the "Need expert advice" form and verifies the success message.
      */
-    test('Submit Need expert advice form', async ({ page }) => {
-        console.log('Using test data:', formData); // Log test data for debugging
-        
-        await aboutPage.submitExpertAdviceForm(formData); // Submit the form
-        const successText = await aboutPage.getSuccessMessageText(); // Get success message
-        
-        expect(successText).toContain('Thank You'); // Verify success message appears
+    test('Submit Need expert advice form', { tag: ['@Smoke', '@Regression'] } , async ({ page }) => {
+        // Log test data for debugging
+        console.log('Using test data:', formData); 
+
+        // Submit the form
+        await aboutPage.submitExpertAdviceForm(formData); 
+        // Get success message text
+        const successText = await aboutPage.getSuccessMessageText(); 
+        // Verify success message appears
+        expect(successText).toContain('Thank You'); 
     });
 });
